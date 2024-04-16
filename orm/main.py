@@ -41,7 +41,7 @@ if publisher:
             .join(Shop, Shop.id == Stock.id_shop) \
             .filter(Book.id_publisher == publisher.id).all()
     for sale in sales_info:
-        print(f"Название книги: {sale[0]}, Магазин: {sale[1]}, Цена: {sale[2]}, Дата продажи: {sale[3]}")
+        print(f"{sale[0]} | {sale[1]} | {sale[2]} | {sale[3]}")
 else:
     print("Издатель не найден.")
 
